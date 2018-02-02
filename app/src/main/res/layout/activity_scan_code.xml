@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="projects.nyinyihtunlwin.codescanner.activities.MainActivity">
+    tools:context="projects.nyinyihtunlwin.codescanner.activities.ScanCodeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,38 +23,59 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+            android:id="@+id/ll_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_xlarge"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_scan_code"
+                android:id="@+id/btn_scan_with_back_camera"
                 style="@style/AccentBorderButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/bg_ripple_accent"
-                android:text="@string/scan_codes" />
+                android:text="@string/scan_with_back_camera" />
 
             <Button
-                android:id="@+id/btn_generate_code"
+                android:id="@+id/btn_scan_with_front_camera"
                 style="@style/AccentBorderButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/margin_large"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/bg_ripple_accent"
-                android:text="@string/generate_code" />
+                android:text="@string/scan_with_front_camera" />
+
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium_2"
+            android:text="Result"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_heading_1x" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            style="@style/AccentBorderButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_btn"
+            android:layout_below="@id/tv_title"
+            android:layout_margin="@dimen/margin_large"
+            android:textColor="@color/primary_text" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

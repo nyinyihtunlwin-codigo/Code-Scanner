@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="projects.nyinyihtunlwin.codescanner">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
+        android:name=".CodeScannerApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.GenerateCodeActivity"
+            android:label="@string/generate_code"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ScanCodeActivity"
+            android:label="@string/scan_codes"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
