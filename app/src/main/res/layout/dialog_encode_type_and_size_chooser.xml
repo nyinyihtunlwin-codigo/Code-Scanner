@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <LinearLayout
+            android:id="@+id/ll_encode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_encode_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/encode_type"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sp_encode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_result"
+                android:entries="@array/encode_types"
+                android:padding="@dimen/margin_medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/ll_encode"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_width"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_weight="1"
+                android:background="@drawable/bg_result"
+                android:hint="Width(pixel)"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingStart="@dimen/margin_medium" />
+
+            <EditText
+                android:id="@+id/et_height"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_result"
+                android:hint="Height(pixel)"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingStart="@dimen/margin_medium" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:foreground="@drawable/bg_ripple_primary"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/ok"
+            android:textColor="@color/primary" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_toStartOf="@id/btn_ok"
+            android:clickable="true"
+            android:foreground="@drawable/bg_ripple_primary"
+            android:gravity="center"
+            android:padding="@dimen/margin_medium"
+            android:text="@string/cancel"
+            android:textColor="@color/primary" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

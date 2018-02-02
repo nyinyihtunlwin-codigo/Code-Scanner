@@ -69,13 +69,18 @@
 
         <TextView
             android:id="@+id/tv_result"
-            style="@style/AccentBorderButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/ll_btn"
             android:layout_below="@id/tv_title"
-            android:layout_margin="@dimen/margin_large"
-            android:textColor="@color/primary_text" />
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_large"
+            android:gravity="center"
+            android:background="@drawable/bg_result"
+            android:padding="@dimen/margin_medium"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

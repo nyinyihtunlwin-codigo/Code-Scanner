@@ -23,6 +23,65 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_margin="@dimen/margin_medium"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_result"
+            android:hint="@string/enter_generate_code"
+            android:paddingStart="@dimen/margin_medium"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_button_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_input"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_generate_barcode"
+                style="@style/AccentBorderButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/bg_ripple_accent"
+                android:text="@string/barcode" />
+
+            <Button
+                android:id="@+id/btn_generate_qr_code"
+                style="@style/AccentBorderButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/bg_ripple_accent"
+                android:text="@string/qr_code" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_button_view">
+
+            <ImageView
+                android:id="@+id/iv_result_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
