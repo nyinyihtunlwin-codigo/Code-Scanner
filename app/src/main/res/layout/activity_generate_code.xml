@@ -36,36 +36,87 @@
             android:singleLine="true" />
 
         <LinearLayout
-            android:id="@+id/ll_button_view"
+            android:id="@+id/ll_encode_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_input"
             android:layout_marginTop="@dimen/margin_medium"
             android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/encode_type"
+                android:textColor="@color/primary_text" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sp_encode"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_result"
+                android:entries="@array/encode_types" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_output_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_encode_type"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/output_height"
+                android:textColor="@color/primary_text" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/sp_width"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.6"
+                android:background="@drawable/bg_result"
+                android:entries="@array/output_height" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="@string/dp"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_regular_3x"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_button_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_output_height"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
             <Button
                 android:id="@+id/btn_generate_barcode"
                 style="@style/AccentBorderButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_small"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="@drawable/bg_ripple_accent"
-                android:text="@string/barcode" />
-
-            <Button
-                android:id="@+id/btn_generate_qr_code"
-                style="@style/AccentBorderButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_small"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="@drawable/bg_ripple_accent"
-                android:text="@string/qr_code" />
+                android:text="@string/generate_code" />
         </LinearLayout>
 
         <RelativeLayout

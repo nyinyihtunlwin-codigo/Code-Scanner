@@ -12,12 +12,34 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="encode_type">ENCODE TYPE :</string>
+    <string name="output_height">BARCODE HEIGHT :</string>
+    <string name="dp">(dp)</string>
 
     <string-array name="encode_types">
+        <item>QR_CODE</item>
         <item>CODE_39</item>
         <item>CODE_93</item>
         <item>CODE_128</item>
         <item>EAN_8</item>
         <item>EAN_13</item>
+    </string-array>
+
+    <string-array name="output_height">
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+        <item>150</item>
+        <item>160</item>
+        <item>170</item>
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
     </string-array>
 </resources>
